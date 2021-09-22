@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../fontawesome-free-5.15.3-web/css/all.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navigation">
+                <div class="imgBox">
+                    <a href="#">
+                        <img src="logo.png" alt="The CYD web application logo">
+                    </a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h2>Benchmarks</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Global</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Sort by DBMS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Sort by Query</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Sort by HOST</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Custom sort</span>
+                        </a>
+                    </li>
+                    <li class="buttonBox">
+                        <button>Run your Query</button>
+                    </li>
+                </ul>
+            </div>
+
+            <main>
+                <div class="cardBox">
+                    <div class="card card_one">
+                        <div class="iconBox">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div>
+                            <div class="numbers">146</div>
+                            <div class="cardName">Query executed</div>
+                        </div>
+                    </div>
+                    <div class="card card_two">
+                        <div class="iconBox">
+                            <i class="fas fa-stopwatch"></i>
+                        </div>
+                        <div>
+                            <div class="numbers">12.3 ms</div>
+                            <div class="cardName">Average execution time</div>
+                        </div>                   
+                    </div>
+                    <div class="card card_three">
+                        <div class="iconBox">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div>
+                            <div class="numbers">32</div>
+                            <div class="cardName">DBMS Servers</div>
+                        </div>
+                    </div>
+                    <div class="card card_four">
+                        <div class="iconBox">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <div class="numbers">98</div>
+                            <div class="cardName">Users</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main">
+                    <div class="graph"></div>
+
+                    <div class="ranking">
+                        <div class="title">
+                            <h3>Global performance ranking</h3>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>#</td>
+                                    <td>DBMS</td>
+                                    <td>Time</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="dbms">
+                                        <span class="logo_dbms"><img src="mysql.png" alt=""></span>
+                                        <span>MySQL</span>
+                                    </td>
+                                    <td>1.5s</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="dbms">
+                                        <span class="logo_dbms"><img src="mssql.png" alt=""></span>
+                                        <span>MsSQL</span>
+                                    </td>
+                                    <td>1.8s</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="dbms">
+                                        <span class="logo_dbms"><img src="postgre.png" alt=""></span>
+                                        <span>PostgreSQL</span>
+                                    </td>
+                                    <td>2.1s</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="dbms">
+                                        <span class="logo_dbms"><img src="oracledb.png" alt=""></span>
+                                        <span>OracleDB</span>
+                                    </td>
+                                    <td>2.2s</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="dbms">
+                                        <span class="logo_dbms"><img src="mariadb.png" alt=""></span>
+                                        <span>MariaDB</span>
+                                    </td>
+                                    <td>2.4s</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="historic">
+                    <div class="title">
+                        <h3>Most recent queries</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>#</td>
+                                <td>Query</td>
+                                <td>Host</td>
+                                <td>DBMS</td>
+                                <td>Date</td>
+                                <td>Time (ms)</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>SELECT name FROM students</td>
+                                <td>John01</td>
+                                <td>MySQL</td>
+                                <td>2020/07/20 18:53:20</td>
+                                <td>1025</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>SELECT name FROM students</td>
+                                <td>John01</td>
+                                <td>MySQL</td>
+                                <td>2020/07/20 18:53:20</td>
+                                <td>1025</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>SELECT name FROM students</td>
+                                <td>John01</td>
+                                <td>MySQL</td>
+                                <td>2020/07/20 18:53:20</td>
+                                <td>1025</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>SELECT name FROM students</td>
+                                <td>John01</td>
+                                <td>MySQL</td>
+                                <td>2020/07/20 18:53:20</td>
+                                <td>1025</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>SELECT name FROM students</td>
+                                <td>John01</td>
+                                <td>MySQL</td>
+                                <td>2020/07/20 18:53:20</td>
+                                <td>1025</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>SELECT name FROM students</td>
+                                <td>John01</td>
+                                <td>MySQL</td>
+                                <td>2020/07/20 18:53:20</td>
+                                <td>1025</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>SELECT name FROM students</td>
+                                <td>John01</td>
+                                <td>MySQL</td>
+                                <td>2020/07/20 18:53:20</td>
+                                <td>1025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="modal">
+                    <div class="modal-content">
+                        <form name="query_stock" method="post">
+                            <div class="input">
+                                <div>
+                                    <label for="query_stock_query_sent" class="required">Enter your request :</label>
+                                    <textarea id="query_stock_query_sent" name="query_stock[query_sent]" required="required" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="submit">
+                                <input type="submit" value="Submit">
+                            </div>
+                        <input type="hidden" id="query_stock__token" name="query_stock[_token]" value="7f179fc574fa7bcc8dfc11f8.N32DQ4RHjNET07ibIODNbLMo5PESoBIzWGlECxryP4A.BknSFdMPxqVroYGrF9C9GPsckIR25iZiC1g1W3OWd8kFNbAW1TThmUO26Q" />
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+
+    <script>
+        let buttonBox = document.querySelector('.buttonBox')
+        let modal = document.querySelector('.modal')
+
+        buttonBox.addEventListener('click', () => {
+            modal.style.display="flex";
+        })
+    </script>
+</html>

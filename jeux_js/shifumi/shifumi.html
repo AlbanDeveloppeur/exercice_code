@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pierre Feuille Ciseaux</title>
+
+        <style>
+            .puit {
+                color: transparent;
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <button>Pierre</button>
+        <button>Feuille</button>
+        <button>Ciseaux</button>
+        <button class="puit">Puit</button>
+        <div class="resultat">Test</div>
+
+        <script>
+            const buttons = document.querySelectorAll("button") // On vise les bouttons
+            for (let i = 0; i < buttons.length; i++) { // On veut détecter tout les bouttons, donc on fait une boucle for en fonction du nombre de bouttons (.lenght)
+                buttons[i].addEventListener("click", function() { // Pour savoir quel bouttons à été coché on va venir détecter grace au tableau créer avec le querySelectorAll + [i]
+                    const joueur = buttons[i].innerHTML; // .innerHTLM vient chercher le texte écris dans le boutton 
+                    const robot = buttons[Math.floor(Math.random() * buttons.length)].innerHTML // Ligne pour aller chercher un nombres / objet au hasard dans un tableau
+                    let resultat = ""
+
+                    // logique du Jeu
+                    if (joueur === robot) {
+                        resultat = "Egalité";
+                    } else if ((joueur === "Pierre" && robot === "Ciseau") || (joueur === "Feuille" && robot === "Pierre") || (joueur === "Ciseaux" && robot === "Feuille")){
+                        resultat = "Gagné";
+                    } else if ((joueur === "Puit" && robot === "Ciseaux") || (joueur === "Puit" && robot === "Pierre") || (joueur === "Puit" && robot === "Feuille")) {
+                        resultat = "Gagné avec la technique secrète";
+                    } else {
+                        resultat = "Perdu";
+                    }
+
+                    document.querySelector(".resultat").innerHTML = `
+                        Joueur : ${joueur} </br>
+                        Robot : ${robot} </br>
+                        ${resultat}
+                    `;
+ 
+                    // console.log(`Joueur : ${joueur} VS Robot : ${robot}`); // Commande pour écrire dans la console log avec des variables
+                })
+            }
+        </script>
+    </body>
+</html>
